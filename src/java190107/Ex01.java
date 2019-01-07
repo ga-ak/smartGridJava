@@ -29,6 +29,6 @@ public class Ex01 {
         }
 
         System.out.println("\n"+sum);
-        //할로
+
     }
 }
