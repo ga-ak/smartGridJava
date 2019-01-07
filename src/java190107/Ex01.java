@@ -21,10 +21,14 @@ public class Ex01 {
         for(int i=0; i<total[1].length; i++) {
             if(total[0][i] == total[1][i]) {
                 sum += total[2][i];
+                System.out.print("O");
+            }else {
+                System.out.print("X");
             }
+            System.out.print("\t");
         }
 
-        System.out.println(sum);
+        System.out.println("\n"+sum);
 
     }
 }
