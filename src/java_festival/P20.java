@@ -1,4 +1,5 @@
 package java_festival;
 
-public class P20 {
+public class P20
+{
 }
