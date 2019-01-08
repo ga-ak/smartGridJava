@@ -4,10 +4,10 @@ import java.util.StringTokenizer;
 
 public class Temp {
     public static void main(String[] args) {
-        String a = "1 2 3 4 5 6 7 8 9 10";
-        StringTokenizer st = new StringTokenizer(a);
-        while (st.hasMoreTokens()) {
-            System.out.println(st.nextToken());
-        }
+        System.out.println((int)'a'+" a");
+        System.out.println((int)'z'+" z");
+        System.out.println((int)'A'+" A");
+        System.out.println((int)'Z'+" Z");
+
     }
 }
