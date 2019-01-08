@@ -3,7 +3,7 @@ package java190108;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Ex02 {
+public class Ex02_01 {
 
     // 예제 : MusicPlayList 만들기
 
