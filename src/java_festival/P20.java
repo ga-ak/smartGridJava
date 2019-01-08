@@ -1,5 +1,7 @@
 package java_festival;
 
+import java.util.Scanner;
+
 public class P20 {
 
     // 명진이는 멀리 뛰기를 연습하고 있습니다.
@@ -16,26 +18,45 @@ public class P20 {
     // 예를 들어 4가 입력된다면, 5를 반환하라
 
     public static void main(String[] args) {
-
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수 입력 >> ");
+        int inputNum = sc.nextInt();
+        System.out.println(jumpCase(inputNum));
 
     }
 
     public static int jumpCase(int input) {
 
-        int count = 0;
-        int[] tempAr = new int[input];
-        for (int i = 0; i < tempAr.length; i++) {
-            tempAr[i] = 1;
+        int k = input/2;
+        int result = 0;
+        int size = input-1;
+
+        for (int i = 1; i <= k; i++) {
+            result += combination(size--, i);
+        }
+        return result+1;
+    }
+
+    public static int combination(int n, int r) {
+        int a = 1,b=1,c=1,result=1;
+
+        for (int i = 2; i <= n; i++) {
+            a *= i;
         }
 
-        int arrayPointer = tempAr.length-1;
-        if (arrayPointer == tempAr.length - 1) {
-            arrayPointer--;
-            count++;
-        } else {
-
+        for (int i = 2; i <= n - r; i++) {
+            b *= i;
         }
-        return input;
+
+        a = a/b;
+
+        for (int i = 2; i <= r; i++) {
+            c*=i;
+        }
+
+        result = a/c;
+
+
+        return result;
     }
 }
