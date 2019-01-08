@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Ex02 {
 
     // 예제 : MusicPlayList 만들기
+
     public static void main(String[] args) {
         ArrayList<String> playList = new ArrayList<String>();
         Scanner sc = new Scanner(System.in);

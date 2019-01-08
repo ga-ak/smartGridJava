@@ -23,6 +23,19 @@ public class P20 {
 
     public static int jumpCase(int input) {
 
+        int count = 0;
+        int[] tempAr = new int[input];
+        for (int i = 0; i < tempAr.length; i++) {
+            tempAr[i] = 1;
+        }
+
+        int arrayPointer = tempAr.length-1;
+        if (arrayPointer == tempAr.length - 1) {
+            arrayPointer--;
+            count++;
+        } else {
+
+        }
         return input;
     }
 }
