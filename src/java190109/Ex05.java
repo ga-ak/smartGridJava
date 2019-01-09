@@ -18,6 +18,7 @@ public class Ex05 {
         } else {
             for (int i = 3; i <= a / 3; i+=2) {
                 if (a % i == 0) {
+                    result = false;
                     break;
                 } else if (i == a / 3) {
                     result = true;
