@@ -47,6 +47,8 @@ public class Ex03 {
                         } else {
                             System.out.println("아이디와 비밀번호를 확인하세요!");
                         }
+                    } else if (i == userList.size()-1) {
+                        System.out.println("아이디와 비밀번호를 확인하세요!");
                     }
                 }
             } else if (inputkey == 3) {

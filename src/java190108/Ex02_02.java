@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex02_02 {
+
+    // PlayList 추가버전
+
     public static void main(String[] args) {
         ArrayList<ArrayList<String>> playList = new ArrayList<>();
         ArrayList<String> curruntList = null;
