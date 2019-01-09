@@ -2,7 +2,7 @@ package java190107;
 
 import java.util.Scanner;
 
-public class Ex01 {
+public class  Ex01 {
     public static void main(String[] args) {
         // 한번에 2차원 배열 선언
         int sum = 0;
