@@ -14,7 +14,11 @@ public class Ex01 {
 //        samsung.channel = 10;
 //        samsung.volumn = 50;
 //        samsung.power = false;
+        samsung.printState();
         samsung.channeUp();
+        samsung.changeColor("빨강");
+        System.out.println();
+        samsung.printState();
 
         // 또 다른 Tv 객체 생성
         Tv lg = new Tv();

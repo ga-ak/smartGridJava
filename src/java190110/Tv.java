@@ -6,6 +6,7 @@ public class Tv {
     private int channel;
     private int volumn;
     private boolean power;
+    private String color;
 
     // 채널 올리는 메소드
     public void channeUp() {
@@ -25,12 +26,23 @@ public class Tv {
     }
 
     public void powerOnOff() {
-        if (power == false) {
-            power = true;
-        } else {
-            power = false;
-        }
+        power = !power;
     }
+
+    public void changeColor(String color) {
+        this.color = color;
+        //System.out.println(this.color);
+    }
+
+    public void printState() {
+        System.out.println("number : "+this.number);
+        System.out.println("channel : "+this.channel);
+        System.out.println("volumn : "+this.volumn);
+        System.out.println("power : "+this.power);
+        System.out.println("color : "+this.color);
+    }
+
+
 
 
 }
