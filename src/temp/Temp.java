@@ -9,7 +9,8 @@ public class Temp {
         char b = 'b';
 
         System.out.println();
-
+        String ddd = new String("나");
+        System.out.println(ddd);
 
 
     }
