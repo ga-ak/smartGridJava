@@ -6,6 +6,16 @@ public class P9 {
 
     // 두 정수를 입력받아 최대공약수 & 최소공배수를 출력하시오
 
+    public static int uclide(int a, int b) {
+        int result;
+        if (a % b == 0) {
+            return b;
+        } else {
+            result = uclide(b, a % b);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -14,19 +24,18 @@ public class P9 {
         System.out.print("숫자2 입력 >> ");
         int num2 = sc.nextInt();
         int smallerNum;
+        int biggerNum;
         int commonDiviser =1;
         int commonMultiple;
         if (num1 > num2) {
+            biggerNum = num1;
             smallerNum = num2;
         } else {
+            biggerNum = num2;
             smallerNum = num1;
         }
 
-        for (int i = 1; i <= smallerNum / 2; i++) {
-            if (num1 % i == 0 && num2 % i == 0) {
-                commonDiviser = i;
-            }
-        }
+        commonDiviser = uclide(biggerNum, smallerNum);
 
         commonMultiple = num1 * num2 / commonDiviser;
 
