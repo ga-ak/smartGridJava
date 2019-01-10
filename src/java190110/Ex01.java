@@ -17,8 +17,9 @@ public class Ex01 {
         samsung.printState();
         samsung.channeUp();
         samsung.changeColor("빨강");
-        System.out.println();
-        samsung.printState();
+
+        System.out.println(samsung.printState());
+
 
         // 또 다른 Tv 객체 생성
         Tv lg = new Tv();

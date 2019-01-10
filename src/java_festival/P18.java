@@ -3,6 +3,9 @@ package java_festival;
 import java.util.Scanner;
 
 public class P18 {
+
+    // 배열 s자로 출력하기
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

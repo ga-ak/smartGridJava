@@ -3,6 +3,9 @@ package java_festival;
 import java.util.Scanner;
 
 public class P17 {
+
+    // 소인수 분해를 해주는 프로그램을 구현하라
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -14,6 +17,7 @@ public class P17 {
             while(number % i == 0) {
                 number /= i;
                 System.out.print(i);
+                // i가 for문의 마지막일때는 "*"출력하지 않음
                 if(number > i) {
                     System.out.print("*");
                 }

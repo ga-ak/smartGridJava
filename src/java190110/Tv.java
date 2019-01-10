@@ -34,12 +34,17 @@ public class Tv {
         //System.out.println(this.color);
     }
 
-    public void printState() {
-        System.out.println("number : "+this.number);
-        System.out.println("channel : "+this.channel);
-        System.out.println("volumn : "+this.volumn);
-        System.out.println("power : "+this.power);
-        System.out.println("color : "+this.color);
+    // 객체 메소드 안에 System.out.println()을 쓰는게 안좋은 이유 : 콘솔에만 출력가능한 메소드로 제한되어버린다
+    public String printState() {
+//        System.out.println("number : "+this.number);
+//        System.out.println("channel : "+this.channel);
+//        System.out.println("volumn : "+this.volumn);
+//        System.out.println("power : "+this.power);
+//        System.out.println("color : "+this.color);
+
+        String result = this.number+" "+this.channel+" "+this.volumn+" "+this.power+" "+this.color;
+
+        return result;
     }
 
 

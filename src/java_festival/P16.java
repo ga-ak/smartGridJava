@@ -1,25 +1,36 @@
 package java_festival;
 
+import java.util.Scanner;
+
 public class P16 {
 
-    // 하샤드 수 구하기
-    // 세자리 수 부터는 오류나기 때문에 고쳐야 함
+    // 하샤드 수 구하는 메소드 구현
+    // 원래 수가 각 자릿수의 합으로 나누어 떨어지는 수
+
+    public static boolean isHarshad(int inputNum) {
+        String tempStringNumber = Integer.toString(inputNum);
+        int sum = 0;
+        boolean result = false;
+
+        // inputNum을 String으로 형변환 하여 자릿수 다루기 편하게 만듬
+        // subString으로 한 글자씩 sum에 누적
+        for (int i = 0; i < tempStringNumber.length(); i++) {
+            sum += Integer.parseInt(tempStringNumber.substring(i,i+1));
+        }
+        System.out.println(sum);
+
+        if (inputNum % sum == 0) {
+            result = true;
+        }
+
+        return result;
+    }
 
     public static void main(String[] args) {
-        int num = 11;
-        int num1, num2;
-        boolean bool;
 
-        num1 = num / 10;
-        num2 = num % 10;
+        Scanner sc = new Scanner(System.in);
+        int inputNum = sc.nextInt();
 
-        int sum = num1 + num2;
-        if(num % sum == 0) {
-            bool = true;
-        } else {
-            bool = false;
-        }
-        System.out.println(bool);
-
+        System.out.println(isHarshad(inputNum));
     }
 }
