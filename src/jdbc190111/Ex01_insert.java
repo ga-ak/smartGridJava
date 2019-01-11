@@ -3,6 +3,7 @@ package jdbc190111;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Ex01_insert {
@@ -56,6 +57,18 @@ public class Ex01_insert {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+
+            }
+            try {
+                psmt.close();
+            } catch (SQLException e) {
+
+            }
+
         }
 
     }
