@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Ex04_cvs {
 
-    //
+    // 데이터 베이스와 연동되는 편의점 포스기 예제
+
+    // 각 메소드 안에서도 Scanner사용하기위해 static으로 선언
     static Scanner sc = new Scanner(System.in);
 
     public static int insert(Connection conn, PreparedStatement psmt) {
