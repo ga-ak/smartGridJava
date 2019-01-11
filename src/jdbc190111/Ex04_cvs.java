@@ -7,7 +7,7 @@ public class Ex04_cvs {
 
     // 데이터 베이스와 연동되는 편의점 포스기 예제
 
-    // 각 메소드 안에서도 Scanner사용하기위해 static으로 선언
+   // 각 메소드 안에서도 Scanner사용하기위해 static으로 선언
     static Scanner sc = new Scanner(System.in);
 
     public static int insert(Connection conn, PreparedStatement psmt) {
@@ -129,7 +129,7 @@ public class Ex04_cvs {
             }
 
             while (true) {
-                System.out.println("=======편의점 포스(점주용)=======");
+                System.out.println("======================편의점 포스(점주용)======================\n");
                 System.out.print("[1]재고 등록 [2]재고 삭제 [3]수량 수정 [4]재고 현황 [5]종료 >>> ");
                 int choice = sc.nextInt();
 
@@ -161,11 +161,11 @@ public class Ex04_cvs {
                     }
                 } else if (choice == 4) {
                     ResultSet rs = select(conn, psmt);
-                    System.out.println("=================");
+                    System.out.println("\n======================");
                     while (rs.next()) {
-                        System.out.println(rs.getString(1) +"\t"+rs.getInt(2)+"개");
+                        System.out.println(rs.getString(1) +"\t\t\t"+rs.getInt(2)+"개");
                     }
-                    System.out.println("=================");
+                    System.out.println("======================\n");
                 } else if (choice == 5) {
                     break;
                 }
