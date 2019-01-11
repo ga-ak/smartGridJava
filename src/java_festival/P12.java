@@ -14,7 +14,7 @@ public class P12 {
 
     public static void main(String[] args) {
         int input = 8;
-        System.out.println("김철호 dlkdjf");
+        //System.out.println("김철호 dlkdjf");
 
         for (int i = 1; i <= input; i++) {
             System.out.print(fibo(i)+" ");
