@@ -50,15 +50,22 @@ public class Menu_main {
 
             MenuVO temp = menueArr.get(choice - 1);
 
+            if (temp.getPrice() * amount > money) {
+                System.out.println("투입된 돈이 부족합니다!");
+                continue;
+            }
+
             if (money - temp.getPrice() * amount > remainMoney) {
                 System.out.println("거스름돈이 부족합니다!");
                 System.out.printf("남은 거스름돈 : %d",remainMoney);
+                continue;
             } else {
                 remainMoney -= temp.getPrice()*amount;
             }
 
             if (temp.getStock() < amount) {
                 System.out.println(temp.getName()+"의 재고가 부족합니다! "+temp.getStock());
+                continue;
             }else{
                 temp.setStock(temp.getStock()-amount);
             }
