@@ -65,9 +65,6 @@ public class Menu_main {
 
             System.out.println(temp.getName()+" "+amount+"개 나옴! 맛있게 드세요!");
         }
-
         System.out.println("자판기 프로그램 종료!");
-
-
     }
 }
