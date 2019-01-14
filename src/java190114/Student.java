@@ -1,4 +1,4 @@
-package jdbc190114;
+package java190114;
 
 public class Student {
 
