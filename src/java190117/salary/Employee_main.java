@@ -22,10 +22,7 @@ public class Employee_main {
         int sumSalary = 0;
         System.out.println("=============1월 월급 총 결산=============");
         for (int i = 0; i < empArray.size(); i++) {
-            System.out.print(empArray.get(i).empNo+"\t");
-            System.out.print(empArray.get(i).empName+"\t");
-            System.out.print("1월 급여 : "+empArray.get(i).cal()+"만원");
-            System.out.println();
+            System.out.println(empArray.get(i));
             sumSalary += empArray.get(i).cal();
         }
         System.out.println("1월 총 급여 : "+sumSalary+"만원");
