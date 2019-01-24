@@ -31,6 +31,7 @@ public class Ex02_select {
             ResultSet rs = psmt.executeQuery();
 
             while (rs.next()) {
+
                 String id = rs.getString(1);
                 String pw = rs.getString(2);
                 int age = rs.getInt(3);
